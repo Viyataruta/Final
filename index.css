@@ -1,0 +1,49 @@
+.home_image{
+    float:left;
+    margin:10px;
+    }
+    
+    .profile_page{
+    float:right;
+    padding: 10px;
+    }
+    
+    .blog_page{
+    float:right;
+    padding: 10px;
+    }
+    
+    
+    .explore_page{
+    float:right;
+    padding: 10px;
+    }
+body {
+    font-family: sans-serif; 
+    background-color: #000000; 
+    color: #cfb991; 
+    margin: 0;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+  }
+
+  .container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+  }
+  h1 {
+    color: #cfb991; 
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .btn-primary {
+    background-color: #cfb991; 
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+  }

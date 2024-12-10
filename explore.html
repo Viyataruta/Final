@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 Blog Layout with Hero Image</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background-image: url('./ExplorePage.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+        .blog-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .blog {
+            background-color: #f7efef;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        .blog h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        .blog p {
+            font-size: 0.9em;
+            line-height: 1.6;
+            color: #555;
+        }
+        .blog img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        nav 
+        {
+          width: 100%;
+          background-color: #000000;
+          height: 100px;
+          padding: 10px;
+        }
+
+        .home_image {
+        float:left;
+          margin: 10px;
+        }
+
+        .profile_page{
+        float:right;
+        padding: 10px;
+        }
+
+        .blog_page{
+        float:right;
+        padding: 10px;
+        }
+
+
+        .explore_page{
+        float:right;
+        padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="home_image">
+          <a href="index.html">
+            <img src="Train.png" alt="Boiler Maker Logo">
+          </a>
+          <span>Boiler Maker Social</span>
+        </div>
+        <div class="nav-links">
+          <a href="explore.html">Explore</a>
+          <a href="blog.html">Blog</a>
+          <a href="profile.html">Profile</a>
+        </div>
+      </nav>
+    
+    
+    <div class="hero-image" style="position: relative; text-align: center;">
+        <img src="Explore.png" alt="Explore Page Image" style="width: 100%; height: 400px; object-fit: cover;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 3em; font-weight: bold; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);">
+            Explore
+        </div>
+    </div>
+
+    <div class="blog-container">
+        <div class="blog">
+            <h3>Photography Club</h3>
+            <img src="1explore.jpg" alt="Photography Club Image">
+            <p>Explore the art of capturing moments with the Photography Club. Weekly photo walks and editing workshops will hone your skills!</p>
+        </div>
+        <div class="blog">
+            <h3>Cooking Enthusiasts Club</h3>
+            <img src="2explore.jpg" alt="Cooking Club Image">
+            <p>A club for those who love to cook and share recipes. Join us for monthly potlucks and cooking challenges to unleash your inner chef!</p>
+        </div>
+        <div class="blog">
+            <h3>Adventure Sports Club</h3>
+            <img src="3explore.jpg" alt="Adventure Sports Club Image">
+            <p>Thrill-seekers unite! From rock climbing to kayaking, our club organizes adrenaline-packed activities for the daring.</p>
+        </div>
+        <div class="blog">
+            <h3>Bookworms Anonymous</h3>
+            <img src="4explore.jpg" alt="Bookworms Club Image">
+            <p>Love reading? Join Bookworms Anonymous for bi-weekly discussions on popular novels and literary classics.</p>
+        </div>
+        <div class="blog">
+            <h3>Tech Innovators Club</h3>
+            <img src="5explore.jpg" alt="Tech Innovators Club Image">
+            <p>Dive into the world of technology with hands-on workshops, hackathons, and talks by industry experts.</p>
+        </div>
+        <div class="blog">
+            <h3>Music Makers Society</h3>
+            <img src="6explore.jpg" alt = "Music Makers Society Image">
+            <p>Whether you’re a musician or a music lover, this club hosts jam sessions, open mics, and concerts for all to enjoy.</p>
+        </div>
+    </div>
+
+</body>
+</html>

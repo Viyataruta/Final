@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Page</title>
+    <link rel="stylesheet" href="help.css">
+</head>
+<body>
+    <nav>
+        <div class="home_image">
+          <a href="index.html">
+            <img src="Train.png" alt="Boiler Maker Logo">
+          </a>
+          <span>Boiler Maker Social</span>
+        </div>
+        <div class="nav-links">
+          <a href="explore.html">Explore</a>
+          <a href="blog.html">Blog</a>
+          <a href="profile.html">Profile</a>
+        </div>
+      </nav>
+    
+      <script src="script.js"></script>
+    
+      <div class = top_heading>
+        <h1>Boiler Social</h1>
+      </div>
+    
+    <div class="Help-Page">
+        <h1>Help Page</h1>
+
+        <div class="faq">
+            <button class="faq-question" onclick="toggleAnswer(this)">What is the purpose of this social media site?</button>
+            <div class="faq-answer">
+                This platform is designed to help Purdue students find friends.
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="faq-question" onclick="toggleAnswer(this)">Why did we choose the name BoilerMaker Social?</button>
+            <div class="faq-answer">
+                This is supposed to be a play on words related to the beloved Purdue mascot, the BoilerMaker Special. Instead of a train to connect students, it's a social media website designed to connect students to their peers.
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="faq-question" onclick="toggleAnswer(this)">Why is this social media site affiliated with a school email?</button>
+            <div class="faq-answer">
+                The purpose of this is to make it safer for students, ensuring only Purdue students can register. This will prevent bots. Students will also have more ethical behavior online if they know their activity is tied to their school email.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(button) {
+            const answer = button.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none"; 
+            } else {
+                answer.style.display = "block"; 
+            }
+        }
+    </script>
+</body>
+</html>

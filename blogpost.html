@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="blogpost.css">
+</head>
+<body>
+  <nav>
+    <div class="home_image">
+      <a href="index.html">
+        <img src="Train.png" alt="Boiler Maker Logo">
+      </a>
+      <span>Boiler Maker Social</span>
+    </div>
+    <div class="nav-links">
+      <a href="explore.html">Explore</a>
+      <a href="blog.html">Blog</a>
+      <a href="profile.html">Profile</a>
+    </div>
+  </nav>
+
+      <script src="script.js"></script>
+    
+      <div class="top_heading">
+        <h1>Boiler Social</h1>
+      </div>
+    
+    <div class="container">
+        <h1>Blog</h1>
+        <form id="addBlogPost" onsubmit="return addBlogPost(event)">
+            <label for="newBlogTitle">Blog Title:</label>
+            <input type="text" id="newBlogTitle" name="newBlogTitle" required>
+
+            <label for="newBlogCaption">Blog Caption:</label>
+            <textarea id="newBlogCaption" name="newBlogCaption" rows="4" cols="50" required></textarea>
+
+            <button type="submit">Add Blog Post</button>
+        </form>
+
+        <button id="successButton" style="display:none" onclick="handleSuccess()">Success!</button>
+    </div>
+
+    <script>
+        function addBlogPost(event) {
+            event.preventDefault();  // Prevent the form from submitting
+
+            const newBlogTitle = document.getElementById("newBlogTitle").value;
+            const newBlogCaption = document.getElementById("newBlogCaption").value;
+
+            console.log("Blog Title:", newBlogTitle);
+            console.log("Blog Caption:", newBlogCaption);
+            const blogPostData = {
+                title: newBlogTitle,
+                caption: newBlogCaption
+            };
+            localStorage.setItem('newBlogPost', JSON.stringify(blogPostData));
+
+            const successButton = document.getElementById("successButton");
+            successButton.style.display = "inline-block";
+        }
+
+        function handleSuccess() {
+            alert("Thank you for adding a blog post!");
+            window.location.href = 'blog.html'; 
+        }
+    </script>
+</body>
+</html>

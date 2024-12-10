@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <nav>
+        <div class="home_image">
+          <a href="index.html">
+            <img src="Train.png" alt="Boiler Maker Logo">
+          </a>
+          <span>Boiler Maker Social</span>
+        </div>
+        <div class="nav-links">
+          <a href="explore.html">Explore</a>
+          <a href="blog.html">Blog</a>
+          <a href="profile.html">Profile</a>
+        </div>
+      </nav>
+    
+      <script src="script.js"></script>
+    
+      <div class = top_heading>
+        <h1>Boiler Social</h1>
+      </div>
+    
+    <h1>Login</h1>
+    <form id="loginForm" onsubmit="return handleLogin()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <script>
+        function handleLogin() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                return false; 
+            }
+
+            alert("Login successful!");
+            window.location.href = 'afterlogin.html';
+            return false; 
+        }
+    </script>
+</body>
+</html>

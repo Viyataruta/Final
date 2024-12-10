@@ -1,0 +1,79 @@
+html, body {
+    height: 100%;
+    width: 100%; 
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    background-color: ghostwhite;
+  }
+  
+  nav 
+  {
+    width: 100%;
+    background-color: #000000;
+    height: 100px;
+    padding: 10px;
+  }
+  
+  .home_image {
+  float:left;
+    margin: 10px;
+  }
+  
+  .profile_page{
+  float:right;
+  padding: 10px;
+  }
+  
+  .blog_page{
+  float:right;
+  padding: 10px;
+  }
+  
+  
+  .explore_page{
+  float:right;
+  padding: 10px;
+  }
+  
+  .top_heading {
+    font-size: 50px;
+    padding-left: 50px;
+    margin: 0px;
+  }
+  
+  .main_body {
+    padding-left: 50px;
+    margin: 0px;
+  }
+  
+  .small_title {
+    font-size: 30px;
+  }
+  
+  /* Updated layout for vertical stacking */
+  .posts_container {
+    display: block; /* Stack elements vertically */
+    padding: 20px;
+  }
+  
+  .important_post, .other_posts {
+    width: 100%; /* Full width */
+    margin: 20px 0; /* Vertical spacing */
+  }
+  
+  .post1, .post2 {
+    display: flex;
+    margin: 10px 0;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+  }
+  
+  .post1_image, .post2_image {
+    flex: 0 0 30%; /* Adjust as needed */
+    margin: 10px;
+  }
+  
+  .post1_info, .post2_info {
+    flex: 1; /* Fills the remaining space */
+    margin: 10px;
+  }

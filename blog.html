@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After Blog Post</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <nav>
+        <div class="home_image">
+          <a href="index.html">
+            <img src="Train.png" alt="Boiler Maker Logo">
+          </a>
+          <span>Boiler Maker Social</span>
+        </div>
+        <div class="nav-links">
+          <a href="explore.html">Explore</a>
+          <a href="blog.html">Blog</a>
+          <a href="profile.html">Profile</a>
+        </div>
+      </nav>
+    
+
+    <div class="top_heading">
+        <h1>Boiler Social</h1>
+    </div>
+
+    <div class="blog-container">
+        <h1>Your Blog Post</h1>
+        
+        <!-- show blog post -->
+        <div id="blogPostDisplay">
+            <h2 id="blogTitle">Loading...</h2>
+            <p id="blogCaption">Please wait...</p>
+        </div>
+
+        <!-- edit blog postm -->
+        <div id="editBlogPostForm" style="display:none;">
+            <h2>Edit Blog Post</h2>
+            <form id="editBlogForm" onsubmit="return updateBlogPost(event)">
+                <label for="editBlogTitle">Blog Title:</label>
+                <input type="text" id="editBlogTitle" name="editBlogTitle" required><br>
+
+                <label for="editBlogCaption">Blog Caption:</label>
+                <textarea id="editBlogCaption" name="editBlogCaption" rows="4" cols="50" required></textarea><br>
+
+                <button type="submit">Update Blog Post</button>
+            </form>
+        </div>
+
+        <button id="editButton" onclick="editBlogPost()">Edit Blog Post</button>
+        <button onclick="window.location.href='index.html'">Go Home</button>
+    </div>
+
+    <script>
+        // display the post the user wrote on the previous page 
+        window.onload = function() {
+            const blogPost = JSON.parse(localStorage.getItem('newBlogPost'));
+
+            if (blogPost) {
+                document.getElementById('blogTitle').innerText = blogPost.title;
+                document.getElementById('blogCaption').innerText = blogPost.caption;
+            } else {
+                document.getElementById('blogTitle').innerText = "No blog post found.";
+                document.getElementById('blogCaption').innerText = "It seems like no blog post was saved.";
+            }
+        }
+
+        function editBlogPost() {
+            const blogPost = JSON.parse(localStorage.getItem('newBlogPost'));
+
+            if (blogPost) {
+                document.getElementById('editBlogTitle').value = blogPost.title;
+                document.getElementById('editBlogCaption').value = blogPost.caption;
+
+                document.getElementById('blogPostDisplay').style.display = 'none';
+                document.getElementById('editBlogPostForm').style.display = 'block';
+                document.getElementById('editButton').style.display = 'none';
+            }
+        }
+
+        function updateBlogPost(event) {
+            event.preventDefault();
+
+            const updatedTitle = document.getElementById('editBlogTitle').value;
+            const updatedCaption = document.getElementById('editBlogCaption').value;
+
+            const updatedBlogPost = {
+                title: updatedTitle,
+                caption: updatedCaption
+            };
+            localStorage.setItem('newBlogPost', JSON.stringify(updatedBlogPost));
+
+            document.getElementById('blogTitle').innerText = updatedTitle;
+            document.getElementById('blogCaption').innerText = updatedCaption;
+
+            document.getElementById('editBlogPostForm').style.display = 'none';
+            document.getElementById('blogPostDisplay').style.display = 'block';
+            document.getElementById('editButton').style.display = 'inline-block';
+
+            alert('Blog post updated successfully!');
+        }
+    </script>
+</body>
+</html>

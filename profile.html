@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Profile</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <nav>
+        <div class="home_image">
+          <a href="index.html">
+            <img src="Train.png" alt="Boiler Maker Logo">
+          </a>
+          <span>Boiler Maker Social</span>
+        </div>
+        <div class="nav-links">
+          <a href="explore.html">Explore</a>
+          <a href="blog.html">Blog</a>
+          <a href="profile.html">Profile</a>
+        </div>
+      </nav>
+    
+  <div class="form-container">
+      <h1>Create Your Profile</h1>
+      <form id="profile-form" onsubmit="submitForm(event)">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required><br>
+
+
+
+
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required><br>
+
+
+
+
+          <label for="major">Major:</label>
+          <input type="text" id="major" name="major" required><br>
+
+
+
+
+          <label for="hometown">Hometown:</label>
+          <input type="text" id="hometown" name="hometown" required><br>
+
+
+
+
+          <h2>Select Interests</h2>
+          <label>
+              <input type="checkbox" id="cooking" name="cooking" value="Cooking"> Cooking
+          </label><br>
+          <label>
+              <input type="checkbox" id="art" name="art" value="Art"> Art
+          </label><br>
+          <label>
+              <input type="checkbox" id="sports" name="sports" value="Sports"> Sports
+          </label><br>
+          <label>
+              <input type="checkbox" id="music" name="music" value="Music"> Music
+          </label><br><br>
+
+
+
+
+          <button type="submit">Submit</button>
+      </form>
+  </div>
+
+
+
+
+  <script>
+      function submitForm(event) {
+          event.preventDefault();
+
+
+
+
+          const formData = new FormData(document.getElementById('profile-form'));
+          const profileData = {};
+
+
+
+
+          formData.forEach((value, key) => {
+              if (key === 'cooking' || key === 'art' || key === 'sports' || key === 'music') {
+                  profileData[key] = value;
+              } else {
+                  profileData[key] = value;
+              }
+          });
+          localStorage.setItem('profileData', JSON.stringify(profileData));
+
+
+
+
+          alert("Profile created successfully!");
+          window.location.href = 'friends.html';
+      }
+  </script>
+</body>
+</html>
+
+
+
+
+
+

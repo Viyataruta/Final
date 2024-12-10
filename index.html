@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <nav>
+      <div class="home_image">
+        <a href="index.html">
+          <img src="Train.png" alt="Boiler Maker Logo">
+        </a>
+        <span>Boiler Maker Social</span>
+      </div>
+      <div class="nav-links">
+        <a href="explore.html">Explore</a>
+        <a href="blog.html">Blog</a>
+        <a href="profile.html">Profile</a>
+      </div>
+    </nav>
+  
+    <script src="script.js"></script>
+  
+    <div class = top_heading>
+      <h1>Boiler Social</h1>
+    </div>
+  
+    <div class="container text-center">
+      <h1>Welcome to BoilerMaker Social!</h1>
+      <div class="mt-4">
+        <button type="button" class="btn btn-primary me-2" id="signUpButton">Sign Up</button>
+        <button type="button" class="btn btn-secondary" id="logInButton">Log In</button>
+      </div>
+    </div>
+    <script>
+      document.getElementById('signUpButton').addEventListener('click', function() {
+        window.location.href = 'signup.html'; 
+      });
+
+      document.getElementById('logInButton').addEventListener('click', function() {
+        window.location.href = 'login.html'; 
+      });
+    </script>
+  </body>
+</html>

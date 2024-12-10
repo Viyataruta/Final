@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Profile Display</title>
+   <link rel="stylesheet" href="friends.css">
+</head>
+<body>
+    <nav>
+        <div class="home_image">
+          <a href="index.html">
+            <img src="Train.png" alt="Boiler Maker Logo">
+          </a>
+          <span>Boiler Maker Social</span>
+        </div>
+        <div class="nav-links">
+          <a href="explore.html">Explore</a>
+          <a href="blog.html">Blog</a>
+          <a href="profile.html">Profile</a>
+        </div>
+      </nav>
+    
+      <script src="script.js"></script>
+    
+      <div class = top_heading>
+        <h1>Boiler Social</h1>
+      </div>
+    
+
+   <h1>Profile Information</h1>
+   <div class="profile" id="profile"></div>
+   <button onclick="window.location.href='profile.html'">Edit Profile</button>
+
+
+   <script>
+       const profileData = JSON.parse(localStorage.getItem('profileData'));
+
+
+       if (profileData) {
+           const profileDiv = document.getElementById('profile');
+
+
+           profileDiv.innerHTML = `
+               <h2>${profileData.firstName} ${profileData.lastName}</h2>
+               <p><strong>Major:</strong> ${profileData.major}</p>
+               <p><strong>Hometown:</strong> ${profileData.hometown}</p>
+               <h3>Interests:</h3>
+               <ul class="interest-list">
+                   ${profileData.cooking ? `<li>Cooking</li>` : ''}
+                   ${profileData.art ? `<li>Art</li>` : ''}
+                   ${profileData.sports ? `<li>Sports</li>` : ''}
+                   ${profileData.music ? `<li>Music</li>` : ''}
+               </ul>
+           `;
+       } else {
+           document.getElementById('profile').innerHTML = '<p>No profile found.</p>';
+       }
+   </script>
+  
+</body>
+</html>
+
+
+
+

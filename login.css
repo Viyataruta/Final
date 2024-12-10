@@ -1,0 +1,61 @@
+.home_image{
+    float:left;
+    margin:10px;
+    }
+    
+    .profile_page{
+    float:right;
+    padding: 10px;
+    }
+    
+    .blog_page{
+    float:right;
+    padding: 10px;
+    }
+    
+    
+    .explore_page{
+    float:right;
+    padding: 10px;
+    }
+body {
+    font-family: sans-serif;
+    background-color: #000000; 
+    color: #cfb991; 
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+#loginForm {
+    background-color: #ffffff;
+    color: #000000; 
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto; 
+}
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left; 
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #cfb991; 
+    color: #ffffff; 
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
